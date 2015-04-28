@@ -1,0 +1,19 @@
+{
+	"cars" : [ 
+		{   
+			"marca" : "Volkswagem",
+			"modelo" : "Gol",
+			"placa" : "FFF5498"
+		},
+		{ 
+			"marca" : "Volkswagem",
+			"modelo" : "Fox",
+			"placa" : "FOX4125"
+		},
+		{ 
+			"marca" : "Volkswagen",
+			"modelo" : "Fusca",
+			"placa" : "PAI4121"
+		}
+	]  
+}

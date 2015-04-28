@@ -1,0 +1,13 @@
+body {
+	background-color: lightgray;
+} 
+.container-fluid{
+	width: 70%;
+	margin: 0 auto;
+}
+.btn{
+	padding: 6px 15px;
+}
+.header__action--createCar{
+	padding: 20px 0;
+}
