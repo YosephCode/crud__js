@@ -1,9 +1,14 @@
+<!Doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Crud Veiculo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
+
 </head>
 <body ng-app="register">
 	<section class="container-fluid" ng-controller="CarsController">
@@ -13,29 +18,50 @@
 				<a class="btn btn-primary btn-success btn-lg" ng-click="toggleModal(); setState('cadastro')">Cadastrar Carro</a>
 			</header>
 			
-			<modal title="Cadastrar carro" visible="showModal" ng-cloak>
+			<modal title="Dados do Veículo" visible="showModal" ng-cloak>
 				<div ng-include src="template"></div>
 		    </modal>
+			
+			<article class="container table table--search">
+				<div class="row">
+					<div class="form-group col-sm-5 col-md-6">
+						<label for="marca">Buscar Marca</label>
+						<input type="text" class="form-control" ng-model="searching.marca" />
+					</div>
+					<div class="form-group col-sm-5 col-md-6">
+						<label for="modelo">Buscar Modelo</label>
+						<input type="text" class="form-control" ng-model="searching.modelo" />
+					</div>
+				</div>
+			</article>
 			
 			<table ng-table="tableParams" class="container table table-striped" ng-cloak>
 			    <thead>
 			        <tr>
-			            <th>Placa</th>
-			            <th>Modelo</th>
+			            <th class="hidden-xs">Placa</th>
+			            <th>Imagem</th>
+			            <th class="hidden-xs">Modelo</th>
 			            <th>Marca</th>
+			            <th class="hidden-xs">Combustível</th>
 			            <th>Ações</th>
 			        </tr>
 			    </thead>
 			    <tbody>
-			        <tr ng-repeat="car in cars" ng-cloak>
-			            <td data-title="'Placa'">
+			        <tr ng-repeat="car in cars | filter:searching:strict" ng-cloak>
+			            <td class="hidden-xs" data-title="'Placa'">
 			                <span>{{car.placa}}</span>
 			            </td>
-			            <td data-title="Modelo">
+			            <td data-title="'Imagem'">
+			                <img width="60" height="60" src="{{car.imagem}}">
+			            </td>
+			            <td class="hidden-xs" data-title="Modelo">
 			                <span>{{car.modelo}}</span>
 			            </td>
 			            <td data-title="Marca">
 			                <span>{{car.marca}}</span>
+			            </td>
+			            <td class="hidden-xs"data-title="Combustível">
+			                <span>{{car.combustivel}}</span>
 			            </td>
 
 			            <td data-title="Ações">
@@ -52,8 +78,8 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.6/angular.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/modals/modals_directive.js"></script>
-	<script type="text/javascript" src="js/modals/modals_controller.js"></script>
+	<script type="text/javascript" src="js/modals/modals__directive.js"></script>
+	<script type="text/javascript" src="js/modals/controller/modals__controller.js"></script>
 	
 </body>
 </html>

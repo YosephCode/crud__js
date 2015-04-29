@@ -1,16 +1,22 @@
 {
 	"cars" : [ 
 		{   
+			"combustivel" : "Alcool",
+			"imagem" : "null",
 			"marca" : "Volkswagem",
 			"modelo" : "Gol",
 			"placa" : "FFF5498"
 		},
 		{ 
+			"combustivel" : "Alcool",
+			"imagem" : "null",
 			"marca" : "Volkswagem",
 			"modelo" : "Fox",
 			"placa" : "FOX4125"
 		},
 		{ 
+			"combustivel" : "Alcool",
+			"imagem" : "http://motosnovas.com.br/wp-content/uploads/2015/02/novo-fusca-2015-3.jpg",
 			"marca" : "Volkswagen",
 			"modelo" : "Fusca",
 			"placa" : "PAI4121"
