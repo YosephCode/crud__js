@@ -16,7 +16,7 @@ body .container-fluid .table tr td .table--search{
 }
 
 /*---------------------
-	Responsivo
+	Responsivo básico
 -----------------------*/
 @media (max-width: 992px){
 	body .container-fluid{
