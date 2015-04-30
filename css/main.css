@@ -14,6 +14,10 @@ body .container-fluid .table tr td {
 body .container-fluid .table tr td .table--search{
 	padding: 0;
 }
+
+/*---------------------
+	Responsivo
+-----------------------*/
 @media (max-width: 992px){
 	body .container-fluid{
 		width: 90%

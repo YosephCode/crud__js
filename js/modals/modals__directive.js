@@ -1,4 +1,7 @@
-/* Template padrão das Modals */
+/*-------------------------------------- 
+  diretiva: <modal>
+  descrição: Template padrão das Modals 
+----------------------------------------*/
 app.directive('modal', function () {
     return {
       template: '<div class="modal fade">' + 
