@@ -21,20 +21,19 @@ app.controller('CarsController', ['$scope','$http', function($scope, $http){
         if(value === "read") {
         	
         	angular.forEach($scope.cars, function(obj) {
-			    if(obj.imagem == "null" || obj.imagem == undefined || obj.imagem == "")   {
+			    if(obj.imagem == null || obj.imagem == undefined || obj.imagem == "")   {
 			    	obj.imagem = "https://contaazul.com/img/fb_thumb3.jpg";
 			    }
 		    });
         }else if(value === "addCar") {
         	
-        	if($scope.cars[$scope.cars.length-1].imagem == "null" || $scope.cars[$scope.cars.length-1].imagem == undefined || $scope.cars[$scope.cars.length-1].imagem == ""){
+        	if($scope.cars[$scope.cars.length-1].imagem == null || $scope.cars[$scope.cars.length-1].imagem == undefined || $scope.cars[$scope.cars.length-1].imagem == ""){
 				$scope.cars[$scope.cars.length-1].imagem = "https://contaazul.com/img/fb_thumb3.jpg";
-			}else {
-				console.log("Não foi encontrado a imagem");
 			}
+			
         }else if(value === "update"){
         	
-        	if(newValue.imagem == "null" || newValue.imagem == undefined || newValue.imagem == ""){
+        	if(newValue.imagem == null || newValue.imagem == undefined || newValue.imagem == ""){
 				newValue.imagem = "https://contaazul.com/img/fb_thumb3.jpg";
 			}
         }

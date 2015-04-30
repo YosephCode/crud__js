@@ -1,15 +1,15 @@
 {
 	"cars" : [ 
 		{   
-			"combustivel" : "Alcool",
-			"imagem" : "null",
+			"combustivel" : "Flex",
+			"imagem" : null,
 			"marca" : "Volkswagem",
 			"modelo" : "Gol",
 			"placa" : "FFF5498"
 		},
 		{ 
-			"combustivel" : "Alcool",
-			"imagem" : "null",
+			"combustivel" : "Gasolina",
+			"imagem" : null,
 			"marca" : "Volkswagem",
 			"modelo" : "Fox",
 			"placa" : "FOX4125"

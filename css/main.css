@@ -28,5 +28,8 @@ body .container-fluid .table tr td .table--search{
 	body .container-fluid .btn {
 	  padding: 6px 8px;
 	}
+	body .container-fluid .table--search .form-group{
+		width: 100% !important;
+	}
 }
 
