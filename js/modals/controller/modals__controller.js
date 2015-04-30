@@ -6,7 +6,7 @@ app.controller('ModalController', function ($scope) {
 
 	/* Esconde a modal */
     $scope.showModal = false;
-
+    
 
     /*---------------------------------------------------------- 
     	function: toggleModal()
@@ -63,7 +63,8 @@ app.controller('ModalController', function ($scope) {
 
 	$scope.updateImg = function(car){
 		var crud = "update";
-		$scope.$emit('LAST_IMAGE_CAR_ADD', crud, car);		
+		$scope.$emit('LAST_IMAGE_CAR_ADD', crud, car);	
+        
 		$scope.showModal = false;
 	}
 });
