@@ -38,6 +38,7 @@ app.controller('ModalController', function ($scope) {
 		var crud = "addCar";
 		$scope.$emit('LAST_IMAGE_CAR_ADD', crud);	
 		
+        delete $scope.car;
 		/* Zera o form de cadastro */
 		$( '#newsletterform' ).each(function(){
 		    this.reset();
@@ -45,14 +46,23 @@ app.controller('ModalController', function ($scope) {
 	}
 
 
+
     /*---------------------------------------------------------- 
     	evento: CAR_READY
     	descrição: adiciona o carro na lista/tabela pela modal,
     	verifica imagem e zera dados escritos no form 
     ------------------------------------------------------------*/
-	$scope.$on('CAR_READY', function (event, car) {
-        $scope.updateCar = car;
-        $scope.setState('editar'); 
+	$scope.$on('CAR_READY', function (event, car, state) {
+        
+        if(state === "read"){
+            $scope.read = car;    
+            $scope.setState('visualizar');
+            $scope.toggleModal();
+        }else if(state === "update"){
+            $scope.updateCar = car;
+            $scope.setState('editar');
+            $scope.toggleModal();
+        }
     });
 
 
